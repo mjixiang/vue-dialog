@@ -35,19 +35,6 @@
 	.xa-bg-black-click:hover{background-color:#333;}
 	.xa-click:hover{background:#f2f2f2;}
 	</style>
-</head>
-<body>
-	<div id="app">
-		<button @click="dialog.show = true">显示弹框</button>
-		<dialog :show.sync="dialog.show" :title="dialog.title" :buttons="dialog.buttons">
-			<div style="min-height:500px;width:800px;">
-				<div style="text-align:center;padding:50px 0;">
-					<strong>点下面自定义按钮窗口切换主题</strong>	
-					<p>弹框正文内容</p>
-				</div>
-			</div>
-		</dialog>
-	</div>
 
 	<script src="vue.min.js"></script>
 	<script>
@@ -133,14 +120,19 @@
 		})
 		//注册全局组件开始
 	</script>
-
-	<!--  注释开始 -->
-	<br><br><br><br>
-	<div style="border-left:5px solid #987654;background:#eee;padding:8px 15px;line-height:40px;">
-		<div style="color:red;">注：该示例用了部分es6代码，请用较新版本的chrome打开,否则无法正常工作</div>
-		<div><a href="https://github.com/mjixiang/vue-dialog/blob/master/dialog.vue">dialog.vue</a>为项目中使用组件，本示例为了简化操作将其代码融入index.html</div>
+</head>
+<body>
+	<div id="app">
+		<button @click="dialog.show = true">显示弹框</button>
+		<dialog :show.sync="dialog.show" :title="dialog.title" :buttons="dialog.buttons">
+			<div style="min-height:450px;width:800px;">
+				<div style="text-align:center;padding:50px 0;">
+					<strong>点下面自定义按钮窗口切换主题</strong>	
+					<p>弹框正文内容</p>
+				</div>
+			</div>
+		</dialog>
 	</div>
-	<!--  注释结束 -->
 	<script>
 		//示例js
 		var buttons = [
@@ -207,7 +199,14 @@
   				}
   			}
   		});
-  		
 	</script>
+
+	<!-- 注解开始 -->
+	<br><br><br><br>
+	<div style="border-left:5px solid #987654;background:#eee;padding:8px 15px;line-height:40px;">
+		<div style="color:red;">注：该示例用了部分es6代码，请用较新版本的chrome或火狐打开,否则无法正常工作</div>
+		<div><a href="https://github.com/mjixiang/vue-dialog/blob/master/dialog.vue">dialog.vue</a>为项目中使用组件，本示例为了简化操作将其代码融入index.html</div>
+	</div>
+	<!-- 注解结束 -->
 </body>
 </html>
